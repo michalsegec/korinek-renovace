@@ -66,7 +66,10 @@ export default function Hero() {
           width={800}
           height={1000}
           priority
-          sizes="(min-width: 1024px) 440px, 100vw"
+          // On phones the photo is the first big thing, so keep the file small:
+          // exact width (screen minus side padding) and a bit more compression.
+          sizes="(min-width: 1024px) 440px, calc(100vw - 32px)"
+          quality={60}
           className="aspect-[16/10] w-full rounded-lg bg-porcelain-deep object-cover lg:aspect-[4/5]"
         />
         <figcaption className="mt-3 hidden text-sm text-ink-soft lg:block">

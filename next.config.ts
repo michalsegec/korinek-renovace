@@ -24,6 +24,10 @@ const nextConfig: NextConfig = {
   images: {
     // Allow demo photos from Unsplash. For a real client, use their own photos in /public instead.
     remotePatterns: [{ protocol: "https", hostname: "images.unsplash.com" }],
+    // AVIF files are about 20–30 % smaller than WebP; browsers that can't show AVIF get WebP
+    formats: ["image/avif", "image/webp"],
+    // Allow quality 60 (hero) next to the default 75
+    qualities: [60, 75],
   },
   experimental: {
     // Put the CSS straight into the HTML, so the browser doesn't wait for a separate CSS file

@@ -20,10 +20,10 @@ const featured = {
 
 const others = [
   {
-    title: "Dřevo a světlý obklad, Žabovřesky",
-    src: img("1600488999585-e4364713b90a"),
-    alt: "Koupelna se světlým obkladem a dřevěnou skříňkou pod umyvadlem",
-    facts: "5 m², hotovo za 19 dní",
+    title: "Prosklený sprchový kout, Bystrc",
+    src: img("1584622650111-993a426fbf0a"),
+    alt: "Moderní koupelna s proskleným sprchovým koutem a umyvadlem se skříňkou",
+    facts: "4,2 m², hotovo za 17 dní",
   },
   {
     title: "Sprchový kout místo vany, Kuřim",

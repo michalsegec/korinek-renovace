@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Star } from "lucide-react";
 
 // Facts that build trust. Shown as a quiet line, not as big "500+" number tiles.
@@ -54,24 +55,18 @@ export default function Hero() {
       {/* Right: the photo */}
       <figure className="lg:col-span-5">
         {/*
-          YOUR TASK: replace this placeholder with a real photo.
-          1. Find a photo of a modern, finished bathroom on unsplash.com
-          2. Save it as  public/images/hero.jpg
-          3. Replace the <div> below with:
-             <Image src="/images/hero.jpg" alt="..." width={800} height={1000} priority
-                    className="aspect-[4/5] w-full rounded-lg object-cover" />
-             and add  import Image from "next/image";  at the top of this file.
+          Demo photo from Unsplash. For a real client: put their photo in /public/images
+          and use src="/images/hero.jpg".
+          "priority" = load this image first, because it's at the top of the page.
         */}
-        <div
-          role="img"
-          aria-label="Místo pro fotku hotové koupelny"
-          className="aspect-[4/5] w-full rounded-lg bg-porcelain-deep"
-          style={{
-            // a soft tile pattern, so the empty space doesn't look broken
-            backgroundImage:
-              "linear-gradient(var(--color-line) 1px, transparent 1px), linear-gradient(90deg, var(--color-line) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1600488999585-e4364713b90a?w=1000&q=75&auto=format"
+          alt="Hotová koupelna se světlým obkladem, dřevěnou skříňkou pod umyvadlem a zrcadlem"
+          width={800}
+          height={1000}
+          priority
+          sizes="(min-width: 1024px) 440px, 100vw"
+          className="aspect-[4/5] w-full rounded-lg bg-porcelain-deep object-cover"
         />
         <figcaption className="mt-3 text-sm text-ink-soft">
           Koupelna v Žabovřeskách, hotovo za 19 dní

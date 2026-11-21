@@ -21,8 +21,11 @@ All copy is written in Czech for a real Czech audience. The company, reviews and
 
 ## Quality
 
-PageSpeed Insights on the live site (21 Nov 2026): **100 / 100 / 100 / 100** (Performance, Accessibility, Best Practices, SEO) on both mobile and desktop. Mobile LCP 0.9 s, TBT 0 ms.
+PageSpeed Insights on the live site (21 Nov 2026): **100 / 100 / 100 / 100** (Performance, Accessibility, Best Practices, SEO) on both mobile and desktop. Mobile LCP 1.7 s, desktop LCP 0.5 s, TBT 0 ms.
 Fully keyboard-accessible, WCAG AA contrast, `lang="cs"`, and tested at 375 px width.
+Security headers include an enforced Content-Security-Policy (tested in report-only mode first).
+
+The mobile hero photo is served as AVIF at quality 60 with exact `sizes`, about 11 KB. Without that, putting the photo first on phones cost 3 PageSpeed points (LCP 2.6 s).
 
 ## Tech
 

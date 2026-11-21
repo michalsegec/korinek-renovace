@@ -3,8 +3,13 @@
 // NOTE: fictional company for a portfolio demo.
 
 export const site = {
-  // The live address of the site. Set NEXT_PUBLIC_SITE_URL in .env.local / on Vercel when it's online.
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  // The live address of the site. Vercel tells us its own address automatically;
+  // set NEXT_PUBLIC_SITE_URL only when the site gets its own domain (e.g. korinek-renovace.cz).
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
   name: "Kořínek Renovace",
   phone: "+420 777 123 456",
   phoneHref: "tel:+420777123456",

@@ -21,7 +21,7 @@ All copy is written in Czech for a real Czech audience. The company, reviews and
 
 ## Quality
 
-Lighthouse (mobile, production build): Performance 94, Accessibility 100, Best Practices 100, SEO 100.
+PageSpeed Insights on the live site (21 Nov 2026): **100 / 100 / 100 / 100** (Performance, Accessibility, Best Practices, SEO) on both mobile and desktop. Mobile LCP 0.9 s, TBT 0 ms.
 Fully keyboard-accessible, WCAG AA contrast, `lang="cs"`, and tested at 375 px width.
 
 ## Tech

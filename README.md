@@ -3,7 +3,7 @@
 A website for a **fictional** bathroom and flat renovation company in Brno, built as a portfolio project.
 All copy is written in Czech for a real Czech audience. The company, reviews and contacts are made up.
 
-**Live demo:** _(add the Vercel link here)_
+**Live demo:** https://korinek-renovace.vercel.app
 
 ## What it does
 

@@ -4,7 +4,8 @@ const isDev = process.env.NODE_ENV === "development";
 
 // Content Security Policy: a list of places the browser may load things from.
 // If an attacker injects a script from somewhere else, the browser refuses it.
-// Starts as "Report-Only" (only warns in the console). Switch to enforcing once the console is clean.
+// Tested in "Report-Only" mode first (21 Nov 2026): no violations, so it's now enforced.
+// If something stops loading after you add a new service (e.g. a map or video), add its domain here.
 const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com`,
@@ -35,7 +36,7 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: [
-          { key: "Content-Security-Policy-Report-Only", value: csp },
+          { key: "Content-Security-Policy", value: csp },
           { key: "X-Frame-Options", value: "DENY" }, // nobody can put our site inside their frame
           { key: "X-Content-Type-Options", value: "nosniff" },
           { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },

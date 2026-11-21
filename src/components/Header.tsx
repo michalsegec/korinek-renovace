@@ -36,7 +36,8 @@ export default function Header() {
         {/* No aria-label here: the visible text is already a good name for screen readers */}
         <Link href="/" className="flex items-baseline gap-1.5">
           <span className="font-display text-2xl font-semibold tracking-[-0.015em]">Kořínek</span>
-          <span className="text-sm text-ink-soft">renovace</span>
+          {/* Hidden on very narrow phones, so it doesn't touch the call button */}
+          <span className="text-sm text-ink-soft max-[400px]:hidden">renovace</span>
         </Link>
 
         {/* Desktop menu */}

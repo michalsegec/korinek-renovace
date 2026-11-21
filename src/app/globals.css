@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/*
+  Design tokens (the "rules" of the look).
+  Change a colour here and it changes on the whole site.
+
+  Idea: colours taken from a finished bathroom, not from a web template.
+  Glazed porcelain (background), dark green tile (brand), grout (lines), brass taps (small accent).
+*/
+@theme {
+  --color-porcelain: #f2f3f0;      /* page background, cool glazed white */
+  --color-porcelain-deep: #e4e7e2; /* slightly darker surface */
+  --color-ink: #1c2422;            /* main text, dark grout green */
+  --color-ink-soft: #4f5a56;       /* secondary text (6.4:1 on porcelain) */
+  --color-line: #cdd3cd;           /* grout lines, thin borders */
+  --color-tile: #1f5247;           /* brand: buttons, dark panel (white text 8.9:1) */
+  --color-tile-dark: #173f37;      /* button hover */
+  --color-brass: #b08d57;          /* small accent only (ink text on brass 5.1:1) */
+
+  /* One font family. Headings use its wide version (see .font-display below). */
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: var(--font-archivo), system-ui, sans-serif;
+}
+
+/* Headings: wide and sturdy, like lettering on a builder's van */
+.font-display {
+  font-stretch: 118%;
+  font-weight: 600;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* so the sticky header doesn't cover headings when you jump to #sections */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--color-porcelain);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-tile);
+  color: white;
+}
+
+/* Clear keyboard focus ring everywhere */
+:focus-visible {
+  outline: 2px solid var(--color-tile);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* People who turn off motion in their system get no animations */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Favicon: a green glazed tile with a K. Drawn with shapes, so it doesn't need a font. -->
+  <rect width="64" height="64" rx="10" fill="#1f5247"/>
+  <path d="M17 14h9v15l13-15h11L35.5 30 51 50H40L29.5 36 26 40v10h-9z" fill="#f2f3f0"/>
+</svg>

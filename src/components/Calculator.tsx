@@ -69,7 +69,7 @@ function Choice({
     >
       <input type="radio" name={name} checked={checked} onChange={onChange} className="sr-only" />
       <span className="font-semibold">{title}</span>
-      {note && <span className="mt-1 text-sm leading-snug text-ink-soft">{note}</span>}
+      {note && <span className="mt-1 text-[0.95rem] leading-snug text-ink-soft">{note}</span>}
     </label>
   );
 }
@@ -145,7 +145,7 @@ export default function Calculator() {
                   {area.toLocaleString("cs-CZ")} m²
                 </output>
               </div>
-              <p className="mt-2 text-sm text-ink-soft">
+              <p className="mt-2 text-[0.95rem] text-ink-soft">
                 Plocha podlahy. Běžná koupelna v paneláku má 3–4 m².
               </p>
             </fieldset>
@@ -212,7 +212,7 @@ export default function Calculator() {
                       </span>
                       <span>
                         <span className="block font-semibold">{extras[key].label}</span>
-                        <span className="text-sm text-ink-soft">+ {extras[key].priceNote}</span>
+                        <span className="text-[0.95rem] text-ink-soft">+ {extras[key].priceNote}</span>
                       </span>
                     </label>
                   );
@@ -228,15 +228,15 @@ export default function Calculator() {
                   name="tiles"
                   checked={withTiles}
                   onChange={() => setWithTiles(true)}
-                  title="Zajistíte je vy"
-                  note="Vybereme spolu ve vzorkovně, cena je v kalkulaci"
+                  title="Od nás"
+                  note="Vybereme je spolu ve vzorkovně, cena je v kalkulaci"
                 />
                 <Choice
                   name="tiles"
                   checked={!withTiles}
                   onChange={() => setWithTiles(false)}
-                  title="Koupím si je sám/sama"
-                  note="Počítáme jen práci a stavební materiál"
+                  title="Vlastní"
+                  note="Koupíte si je sami, počítáme jen práci a stavební materiál"
                 />
               </div>
             </fieldset>
@@ -295,7 +295,7 @@ export default function Calculator() {
               >
                 Domluvit bezplatnou prohlídku
               </a>
-              <p className="mt-4 text-sm leading-relaxed text-white/75">
+              <p className="mt-4 leading-relaxed text-white/90">
                 Přijedeme, změříme a do 3 dnů pošleme pevnou cenu. Nic za to neplatíte.
               </p>
             </div>

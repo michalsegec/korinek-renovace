@@ -25,15 +25,20 @@ const reviews = [
   },
 ];
 
+// The "rotten pipe" review goes big: it shows honesty about extra costs, the #1 fear
+const featured = reviews[1];
+const rest = reviews.filter((r) => r !== featured);
+
 export default function Reviews() {
   return (
     <section id="recenze" className="bg-tile text-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:py-24">
-        <div className="lg:col-span-4">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-24">
+        {/* Heading and rating on one line */}
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <h2 className="font-display text-4xl leading-[1.1] tracking-[-0.015em] sm:text-5xl">
             Co píšou zákazníci
           </h2>
-          <p className="mt-6 flex items-center gap-2 text-lg">
+          <p className="flex items-center gap-2 text-lg">
             <span className="flex" aria-hidden="true">
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star key={i} size={18} className="fill-brass text-brass" />
@@ -41,20 +46,29 @@ export default function Reviews() {
             </span>
             <span>
               <strong className="font-semibold">4,9 z 5</strong>
+              <span className="text-white/80">, 87 recenzí na Google</span>
             </span>
           </p>
-          <p className="mt-1 text-white/75">87 recenzí na Google</p>
         </div>
 
-        {/* Two columns of quotes with different lengths, so it doesn't look like a grid of boxes */}
-        <ul className="gap-12 sm:columns-2 lg:col-span-8">
-          {reviews.map((r) => (
-            <li key={r.name} className="mb-10 break-inside-avoid border-t border-white/25 pt-6">
+        {/* One big quote: the review that proves honesty best */}
+        <blockquote className="mt-12 max-w-4xl border-t border-white/25 pt-8">
+          <p className="font-display text-2xl leading-snug sm:text-[2rem]">„{featured.text}“</p>
+          <footer className="mt-6">
+            <span className="font-semibold">{featured.name}</span>
+            <span className="text-white/80">, {featured.job}</span>
+          </footer>
+        </blockquote>
+
+        {/* The rest: smaller, in a row, separated by lines (not boxes) */}
+        <ul className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+          {rest.map((r) => (
+            <li key={r.name} className="border-t border-white/25 pt-6">
               <blockquote>
-                <p className="text-lg leading-relaxed">„{r.text}“</p>
-                <footer className="mt-4 text-sm">
+                <p className="leading-relaxed">„{r.text}“</p>
+                <footer className="mt-4 text-[0.95rem]">
                   <span className="font-semibold">{r.name}</span>
-                  <span className="block text-white/75">{r.job}</span>
+                  <span className="block text-white/80">{r.job}</span>
                 </footer>
               </blockquote>
             </li>

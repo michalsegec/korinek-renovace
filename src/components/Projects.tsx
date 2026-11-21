@@ -61,6 +61,8 @@ export default function Projects() {
               beforeAlt="Původní koupelna s modrým obkladem z 80. let"
               afterAlt="Nová koupelna s velkoformátovým obkladem a sprchovým koutem"
             />
+            {/* Honest label: the demo photos show two different rooms. Remove it when a client gives real before/after photos. */}
+            <p className="mt-3 text-sm text-ink-soft">Ilustrační fotografie, ukázkový web.</p>
           </div>
 
           <div className="flex flex-col lg:col-span-4">
@@ -70,7 +72,7 @@ export default function Projects() {
             <dl className="mt-6 grid grid-cols-3 gap-4 border-y border-line py-5">
               {featured.facts.map((f) => (
                 <div key={f.label}>
-                  <dt className="text-sm text-ink-soft">{f.label}</dt>
+                  <dt className="text-[0.95rem] text-ink-soft">{f.label}</dt>
                   <dd className="mt-0.5 font-semibold">{f.value}</dd>
                 </div>
               ))}
@@ -96,7 +98,7 @@ export default function Projects() {
                 />
               </div>
               <h3 className="mt-4 font-semibold">{p.title}</h3>
-              <p className="mt-1 text-sm text-ink-soft">{p.facts}</p>
+              <p className="mt-1 text-[0.95rem] text-ink-soft">{p.facts}</p>
             </li>
           ))}
         </ul>

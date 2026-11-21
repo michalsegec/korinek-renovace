@@ -67,7 +67,7 @@ export default function Services() {
                 </div>
 
                 {/* Time and price: the two things every customer asks first */}
-                <dl className="flex gap-8 text-sm sm:flex-col sm:gap-3 sm:pt-1.5 sm:text-right">
+                <dl className="flex gap-8 text-[0.95rem] sm:flex-col sm:gap-3 sm:pt-1.5 sm:text-right">
                   <div>
                     <dt className="text-ink-soft">Délka</dt>
                     <dd className="mt-0.5 text-base font-semibold">{s.time}</dd>
@@ -82,7 +82,7 @@ export default function Services() {
           </ul>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-md text-sm leading-relaxed text-ink-soft">
+            <p className="max-w-md leading-relaxed text-ink">
               Ceny zahrnují práci a stavební materiál. Obklady a sanitu si vybíráte sami, rádi
               s vámi zajedeme do vzorkovny.
             </p>

@@ -3,6 +3,7 @@ import Services from "@/components/Services";
 import Calculator from "@/components/Calculator";
 import Projects from "@/components/Projects";
 import Process from "@/components/Process";
+import Team from "@/components/Team";
 import Reviews from "@/components/Reviews";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
@@ -39,6 +40,7 @@ export default function Home() {
       <Calculator />
       <Projects />
       <Process />
+      <Team />
       <Reviews />
       <Faq />
       <Contact />

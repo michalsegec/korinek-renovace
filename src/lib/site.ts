@@ -17,6 +17,8 @@ export const site = {
   city: "Brno",
   address: "Křenová 52, 602 00 Brno",
   legalName: "Kořínek Renovace s.r.o.",
+  // Civil Code §435: an s.r.o. must show its register entry on the website (made up for the demo)
+  register: "zapsaná v obchodním rejstříku vedeném Krajským soudem v Brně, oddíl C, vložka 128441",
   ico: "08734561", // made up on purpose: it fails the IČO checksum, so it can't belong to a real company
   // Show the cookie banner? Only needed when the site measures visits (analytics).
   // The analytics script itself loads only if NEXT_PUBLIC_GA_ID is set AND the visitor agrees.

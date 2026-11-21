@@ -37,21 +37,13 @@ const faqs = [
 export default function Faq() {
   return (
     <section id="otazky" className="border-t border-line">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:py-24">
-        <div className="lg:col-span-4">
-          <h2 className="font-display text-4xl leading-[1.1] tracking-[-0.015em] sm:text-5xl">
-            Časté otázky
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            Nenašli jste odpověď? Zavolejte na{" "}
-            <a href={site.phoneHref} className="font-semibold whitespace-nowrap text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-tile">
-              {site.phone}
-            </a>
-            , {site.hoursLong}.
-          </p>
-        </div>
+      {/* One narrow centred column: a different rhythm from the left/right sections around it */}
+      <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-24">
+        <h2 className="font-display text-4xl leading-[1.1] tracking-[-0.015em] sm:text-5xl">
+          Časté otázky
+        </h2>
 
-        <div className="lg:col-span-8">
+        <div className="mt-10">
           {faqs.map((f) => (
             <details key={f.q} className="group border-b border-line first:border-t">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 text-lg font-semibold [&::-webkit-details-marker]:hidden">
@@ -66,6 +58,14 @@ export default function Faq() {
             </details>
           ))}
         </div>
+
+        <p className="mt-8 text-lg leading-relaxed text-ink-soft">
+          Nenašli jste odpověď? Zavolejte na{" "}
+          <a href={site.phoneHref} className="font-semibold whitespace-nowrap text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-tile">
+            {site.phone}
+          </a>
+          , {site.hoursLong}.
+        </p>
       </div>
     </section>
   );

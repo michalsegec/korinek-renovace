@@ -69,10 +69,11 @@ export default function Header() {
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? "Zavřít menu" : "Otevřít menu"}
-            className="flex h-11 w-11 items-center justify-center rounded-lg text-ink lg:hidden"
+            className="flex h-11 items-center gap-1.5 rounded-lg px-2 text-sm font-medium text-ink lg:hidden"
           >
+            {/* A visible word, not only an icon: not everyone knows that ≡ means "menu" */}
             {open ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+            <span>{open ? "Zavřít" : "Menu"}</span>
           </button>
         </div>
       </div>

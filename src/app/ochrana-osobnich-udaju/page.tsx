@@ -23,7 +23,7 @@ export default function PrivacyPage() {
 
       <h2 className={h2}>Kdo vaše údaje zpracovává</h2>
       <p className={p}>
-        {site.legalName}, IČO {site.ico}, se sídlem {site.address} (dále „my“). Napsat nám můžete na{" "}
+        {site.legalName}, IČO {site.ico}, se sídlem {site.address}, {site.register} (dále „my“). Napsat nám můžete na{" "}
         <a href={`mailto:${site.email}`} className="text-ink underline underline-offset-2">
           {site.email}
         </a>{" "}

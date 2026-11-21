@@ -45,8 +45,8 @@ export default function Footer() {
 
         {/* Legal line: company name, IČO and the privacy links (required for a Czech business) */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/15 pt-6 text-sm text-white/70 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {year} {site.legalName}, IČO {site.ico}
+          <p className="max-w-xl">
+            © {year} {site.legalName}, IČO {site.ico}, {site.address}, {site.register}
           </p>
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             <li>
